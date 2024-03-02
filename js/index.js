@@ -108,3 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(err);
         })
 })
+
+const mask = document.querySelector(".mask");
+window.addEventListener("load", (e) => {
+  e.preventDefault();
+  mask.classList.add("loader--hidin");
+  setTimeout(() => {
+    mask.remove();
+  }, 2000);
+});
